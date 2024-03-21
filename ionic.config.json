@@ -1,0 +1,7 @@
+{
+  "name": "glovo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
