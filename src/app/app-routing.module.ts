@@ -3,6 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { PlatosComponent } from './platos/platos.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
+import { DetallePlatoComponent } from './detalle-plato/detalle-plato.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'pedidos',
     component: PedidosComponent
+  },
+  {
+    path: 'plato/:id',
+    component: DetallePlatoComponent
   }
 ];
 

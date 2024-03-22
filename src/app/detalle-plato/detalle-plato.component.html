@@ -6,9 +6,7 @@
     <ion-title>Platos</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-@for (plato of listaP; track plato.idMeal) {
-  <a [routerLink]="['/plato/', plato.idMeal]">
+@for (plato of platoP; track plato.idMeal) {
   <ion-card>
     <img alt="Silhouette of mountains" src="{{plato.strMealThumb}}" />
     <ion-card-header>
@@ -20,6 +18,5 @@
       <p styles="text-overflow:ellipsis ">{{plato.strInstructions}}</p>
     </ion-card-content>
   </ion-card>
-  </a>
+<ion-button (click)="addToCart(plato)" expand="block">Añadir a la cesta</ion-button> 
 }
-</ion-content>

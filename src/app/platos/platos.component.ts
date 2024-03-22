@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { listaPlatosService } from '../lista-platos.service'
-import { listaPlatos } from '../lista-platos.interface'
+
 @Component({
   selector: 'app-platos',
   templateUrl: './platos.component.html',

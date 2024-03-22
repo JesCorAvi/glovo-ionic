@@ -8,10 +8,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { PlatosComponent } from './platos/platos.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
+import { DetallePlatoComponent } from './detalle-plato/detalle-plato.component';
+
 
 
 @NgModule({
-  declarations: [AppComponent,PlatosComponent, CarritoComponent, PedidosComponent],
+  declarations: [AppComponent,PlatosComponent, CarritoComponent, PedidosComponent, DetallePlatoComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
