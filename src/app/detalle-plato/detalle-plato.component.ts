@@ -13,10 +13,9 @@ export class DetallePlatoComponent  implements OnInit {
   platoP: any[] = [];
   constructor(private route: ActivatedRoute, private detallePlatosService: detallePlatosService, private CarritoService: CarritoService) {
    }
-   
+
   addToCart(plato: any) {
     this.CarritoService.addToCart(plato);
-    window.alert('Your product has been added to the cart!');
   }
   ngOnInit() {
     const routeParams = this.route.snapshot.paramMap;

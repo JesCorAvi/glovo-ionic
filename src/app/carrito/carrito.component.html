@@ -6,18 +6,29 @@
     <ion-title>Carrito</ion-title>
   </ion-toolbar>
 </ion-header>
-@for (item of items; track item.idMeal) {
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>{{item.strMeal}}</ion-card-title>
-      <ion-card-subtitle>{{item.strCategory}}</ion-card-subtitle>
-    </ion-card-header>
-  
+@if (items[0]) {
+  <ion-card id="lista">
     <ion-card-content>
-      {{item.strInstructions}}    
+      <ion-list>
+        @for (item of items; track item.idMeal) {
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="{{item[0].strMealThumb}}" />
+          </ion-thumbnail>
+          <ion-label>{{item[0].strMeal}}</ion-label>
+        </ion-item>
+        }
+      </ion-list>
     </ion-card-content>
-  
-    <ion-button fill="clear">Action 1</ion-button>
-    <ion-button fill="clear">Action 2</ion-button>
+  </ion-card>
+}@else{
+  <ion-card>
+    <img alt="Silhouette of mountains" src="https://i.blogs.es/87930e/comidas-ricas/1366_2000.jpg" />
+    <ion-card-header>
+      <ion-card-title>Carrito vacio!</ion-card-title>
+      <ion-card-subtitle>Añada elementos al carrito</ion-card-subtitle>
+    </ion-card-header>
   </ion-card>
 }
+
+<ion-button fill="clear">Comprar</ion-button>
